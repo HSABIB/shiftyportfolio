@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+<head>
+
+    <!-- Metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- <meta name="keywords" content="HTML5 Template Avo onepage themeforest" /> -->
+    <!-- <meta name="description" content="Avo - Onepage Multi-Purpose HTML5 Template" /> -->
+    <meta name="author" content="" />
+
+    <!-- Title  -->
+    <title>Avo</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'landing/img/fav.png' %}" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <!-- Plugins -->
+    <link rel="stylesheet" href="{% static 'landing/css/plugins.css' %}" />
+
+    <!-- Core Style Css -->
+    <link rel="stylesheet" href="{% static 'landing/css/style_dark.css' %}" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== Start Loading ==================== -->
+    <div id="preloader"></div>
+    <!-- ==================== End Loading ==================== -->
+
+    <!-- ==================== Start progress-scroll-button ==================== -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- ==================== End progress-scroll-button ==================== -->
+
+    <!-- ==================== Start cursor ==================== -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- ==================== End cursor ==================== -->
+
+    <!-- ==================== Start Navbar ==================== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="logo" href="#">
+                <img src="{% static 'landing/img/logo-light.png' %}" style="width:300%" alt="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#block_sec">Results</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#works">Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hire_us">Hire us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}?light=1">
+                            <span class="icon pe-7s-sun cursor-pointer" style="font-size: 16px;"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ==================== End Navbar ==================== -->
+
+    <!-- ==================== Start Slider ==================== -->
+    <header class="slider-bus position-re valign">
+        <div class="container ontop">
+            <div class="swiper-container swiper-content">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                                <div class="caption">
+                                    <h1>
+                                        <div class="thin">Business</div>Automation
+                                    </h1>
+                                    <p>
+                                        Tired of all the micro management inside your company?<br />
+                                        Hand it to us. we will take care of that with just few lines of code.
+                                    </p>
+                                    <a href="{% url 'contact' %}" class="btn-curve btn-color btn-radius mt-30">
+                                        <span>Contact us</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                                <div class="caption">
+                                    <h1>
+                                        <div class="thin">Stunning</div>Apps&nbsp;genies
+                                    </h1>
+                                    <p>
+                                        Got a futuristic business idea that needs an app?<br />
+                                        We'll make your ideas come to life<br />
+                                    </p>
+                                    <a href="{% url 'contact' %}" class="btn-curve btn-color btn-radius mt-30">
+                                        <span>Contact us</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                                <div class="caption">
+                                    <h1 data-splitting>
+                                        <div class="thin">Original</div> Solutions
+                                    </h1>
+                                    <p>If you need to redesign your new project, new visual strategy, ux structure
+                                        or you do have some cool ideas for collaboration.</p>
+                                    <a href="{% url 'contact' %}" class="btn-curve btn-color btn-radius mt-30">
+                                        <span>Contact us</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container swiper-img">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg-img" data-background="{% static 'landing/img/slid/1.jpg' %}" data-overlay-dark="6"></div>
+                <div class="swiper-slide bg-img" data-background="{% static 'landing/img/slid/2.jpg' %}" data-overlay-dark="6"></div>
+                <div class="swiper-slide bg-img" data-background="{% static 'landing/img/slid/3.jpg' %}" data-overlay-dark="6"></div>
+            </div>
+        </div>
+        <div class="curve-bg bg-img" data-background="{% static 'landing/img/business-bg.png' %}"></div>
+
+        <!-- slider setting -->
+        <div class="setone">
+            <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </div>
+        <div class="swiper-pagination custom-font"></div>
+    </header>
+    <!-- ==================== End Slider ==================== -->
+
+    <!-- ==================== Start about ==================== -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 valign">
+                    <div class="content">
+                        <div class="sub-title">
+                            <h6>About Us</h6>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <h3 class="co-tit custom-font wow" data-splitting>Our years of experience.
+                            We have spent it making different 
+                            businesses glow and grow.</h3>
+                        <p class="wow fadeInUp" data-wow-delay=".4s">We are SHIFTY. We automate busniesses,
+                            create remarkable brands and cutting-edge apps.
+                            among a plethora of services, web design and development, tailor made applications, 
+                            ERPs, CRMs, e-commerce solutions, business-to-business applications, business-to-client applications, 
+                            managed hosting and internet portal management are few that we offer.
+                        </p>
+                        <p class="mt-10 wow fadeInUp" data-wow-delay=".4s">
+                            Satisfied clients around the globe 
+                            bear testimony to the quality of our work.
+                        </p>
+                        <a href="{% url 'contact' %}" class="simple-btn custom-font mt-30 wow" data-splitting><span>Know More</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="blc-img">
+                        <div class="bimg wow imago">
+                            <img src="{% static 'landing/img/intro/3.jpg' %}" alt="">
+                        </div>
+                        <div class="skills-circle wow fadeInUp" data-wow-delay=".8">
+                            <div class="item">
+                                <div class="skill" data-value="0.85">
+                                    <span class="custom-font">85%</span>
+                                </div>
+                                <div class="cont">
+                                    <span>Project</span>
+                                    <h6>Consulting</h6>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="skill" data-value="0.98">
+                                    <span class="custom-font">98%</span>
+                                </div>
+                                <div class="cont">
+                                    <span>App</span>
+                                    <h6>Development</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== End about ==================== -->
+
+    <!-- ==================== Start Services ==================== -->
+    <section id="services" class="services section-padding sub-bg">
+        <div class="container">
+            <div class="sec-head custom-font tr-head">
+                <h6>Best Features</h6>
+                <h3>Services.</h3>
+                <span class="tbg">Services</span>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="step-item xbottom">
+                        <span class="icon pe-7s-config"></span>
+                        <h6>Business automation</h6>
+                        <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="step-item xcolor">
+                        <span class="icon pe-7s-phone"></span>
+                        <h6>Web & App Development</h6>
+                        <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".9s">
+                    <div class="step-item xtop">
+                        <span class="icon pe-7s-gleam"></span>
+                        <h6>Digital Marketing</h6>
+                        <p>Tempore corrupti temporibus fuga earum asperiores fugit laudantium.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="smore custom-font">
+                <a href="#0">Discover More</a>
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== End Services ==================== -->
+
+    <!-- ==================== Start block-sec ==================== -->
+    <section class="block-sec">
+        <div class="background bg-img section-padding pb-0" data-background="{% static 'landing/img/pattern.png' %}">
+            <div class="container">
+                <div class="number-sec">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item no-bord">
+                                <span class="icon pe-7s-smile"></span>
+                                <h3 class="custom-font"><span class="count">100+</span></h3>
+                                <p class="wow txt" data-splitting>Happy Clients</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item">
+                                <span class="icon pe-7s-portfolio"></span>
+                                <h3 class="custom-font"><span class="count">150+</span></h3>
+                                <p class="wow txt" data-splitting>Compleate Projects</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item">
+                                <span class="icon pe-7s-coffee"></span>
+                                <h3 class="custom-font"><span class="count">250+</span> k</h3>
+                                <p class="wow txt" data-splitting>Cup of coffee</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item">
+                                <span class="icon pe-7s-star"></span>
+                                <h3 class="custom-font"><span class="count">180+</span></h3>
+                                <p class="wow txt" data-splitting>Completed Consultations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="showreel">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <div class="video-box">
+                                <div class="tit-text">
+                                    <h3 class="wow" data-splitting>Shifty</h3>
+                                </div>
+                                <div class="wow imago">
+                                    <div class="img">
+                                        <img src="{% static 'landing/img/vid.jpg' %}" alt="">
+                                    </div>
+                                    <div class="vid-icon">
+                                        <a class="vid" href="https://vimeo.com/511999654">
+                                            <div class="vid-butn">
+                                                <span class="icon">
+                                                    <i class="fas fa-play"></i>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== End block-sec ==================== -->
+
+    <!-- ==================== Start Works ==================== -->
+    <section id="works" class="work-carousel section-padding caroul sub-bg position-re">
+        <div class="container-fluid mt-100">
+            <div class="sec-head custom-font text-center">
+                <h6 class="wow fadeIn" data-wow-delay=".5s">Portfolio</h6>
+                <h3 class="wow" data-splitting>Our Works.</h3>
+                <span class="tbg">Portfolio</span>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 no-padding">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="item-img bg-img wow imago" data-background="{% static 'landing/img/apps/2.jpg' %}">
+                                    </div>
+                                    <div class="cont bgbox">
+                                        <h6><a href="#0">Artifical intelligence</a></h6>
+                                        <h4><a href="">Enhanced facial recognition for drones.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="item-img bg-img wow imago" data-background="{% static 'landing/img/apps/3.jpg' %}">
+                                    </div>
+                                    <div class="cont bgbox">
+                                        <h6><a href="#0">Business automation</a></h6>
+                                        <h4><a href="">Intelligent warehousing system.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="item-img bg-img wow imago" data-background="{% static 'landing/img/apps/11.jpg' %}">
+                                    </div>
+                                    <div class="cont bgbox">
+                                        <h6><a href="#0">Security & AI</a></h6>
+                                        <h4><a href="">Defense biometric identification system.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="item-img bg-img wow imago" data-background="{% static 'landing/img/apps/8.jpg' %}">
+                                    </div>
+                                    <div class="cont bgbox">
+                                        <h6><a href="#0">Software & Integration</a></h6>
+                                        <h4><a href="">Custom shopify apps.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="item-img bg-img wow imago" data-background="{% static 'landing/img/apps/1.png' %}">
+                                    </div>
+                                    <div class="cont bgbox">
+                                        <h6><a href="#0">Mobile developement</a></h6>
+                                        <h4><a href="">Grocery shop.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="item-img bg-img wow imago" data-background="{% static 'landing/img/apps/4.jpg' %}">
+                                    </div>
+                                    <div class="cont bgbox">
+                                        <h6><a href="#0">Security & AI</a></h6>
+                                        <h4><a href="">Pet surveillance system.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="item-img bg-img wow imago" data-background="{% static 'landing/img/apps/9.png' %}">
+                                    </div>
+                                    <div class="cont bgbox">
+                                        <h6><a href="#0">Business automation</a></h6>
+                                        <h4><a href="">Logistics management software.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- slider setting -->
+                        <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== End Works ==================== -->
+
+    <!-- ==================== Start call-to-action ==================== -->
+    <section id="hire_us" class="call-action section-padding sub-bg bg-img" data-background="{% static 'landing/img/pattern.png' %}" style="background-image: url(&quot;img/pattern.png&quot;);margin-top:150px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-9">
+                    <div class="content sm-mb30">
+                        <h6 class="wow animated words chars splitting" data-splitting="" style="--word-total:2; --char-total:9; visibility: visible;">
+                            <span class="word" data-word="Let’s" style="--word-index:0;">
+                                <span class="char" data-char="L" style="--char-index:0;">L</span>
+                                <span class="char" data-char="e" style="--char-index:1;">e</span>
+                                <span class="char" data-char="t" style="--char-index:2;">t</span>
+                                <span class="char" data-char="’" style="--char-index:3;">’</span>
+                                <span class="char" data-char="s" style="--char-index:4;">s</span>
+                            </span>
+                            <span class="whitespace"></span>
+                            <span class="word" data-word="Talk" style="--word-index:1;">
+                                <span class="char" data-char="T" style="--char-index:5;">T</span>
+                                <span class="char" data-char="a" style="--char-index:6;">a</span>
+                                <span class="char" data-char="l" style="--char-index:7;">l</span>
+                                <span class="char" data-char="k" style="--char-index:8;">k</span>
+                            </span>
+                        </h6>
+                        <h2 class="wow custom-font animated words chars splitting" data-splitting="" style="--word-total:5; --char-total:21; visibility: visible;">
+                            <span class="word" data-word="about" style="--word-index:0;">
+                                <span class="char" data-char="a" style="--char-index:0;">a</span>
+                                <span class="char" data-char="b" style="--char-index:1;">b</span>
+                                <span class="char" data-char="o" style="--char-index:2;">o</span>
+                                <span class="char" data-char="u" style="--char-index:3;">u</span>
+                                <span class="char" data-char="t" style="--char-index:4;">t</span>
+                            </span>
+                            <span class="whitespace"></span>
+                            <span class="word" data-word="your" style="--word-index:1;">
+                                <span class="char" data-char="y" style="--char-index:5;">y</span>
+                                <span class="char" data-char="o" style="--char-index:6;">o</span>
+                                <span class="char" data-char="u" style="--char-index:7;">u</span>
+                                <span class="char" data-char="r" style="--char-index:8;">r</span>
+                            </span> 
+                            <span class="whitespace"></span>
+                            <b>
+                                <span class="word" data-word="next" style="--word-index:2;">
+                                    <span class="char" data-char="n" style="--char-index:9;">n</span>
+                                    <span class="char" data-char="e" style="--char-index:10;">e</span>
+                                    <span class="char" data-char="x" style="--char-index:11;">x</span>
+                                    <span class="char" data-char="t" style="--char-index:12;">t</span>
+                                </span>
+                                <span class="whitespace"> </span>
+                                <span class="word" data-word="project" style="--word-index:3;">
+                                    <span class="char" data-char="p" style="--char-index:13;">p</span>
+                                    <span class="char" data-char="r" style="--char-index:14;">r</span>
+                                    <span class="char" data-char="o" style="--char-index:15;">o</span>
+                                    <span class="char" data-char="j" style="--char-index:16;">j</span>
+                                    <span class="char" data-char="e" style="--char-index:17;">e</span>
+                                    <span class="char" data-char="c" style="--char-index:18;">c</span>
+                                    <span class="char" data-char="t" style="--char-index:19;">t</span>
+                                </span>
+                            </b>
+                            <span class="word" data-word="." style="--word-index:4;">
+                                <span class="char" data-char="." style="--char-index:20;">.</span>
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 valign">
+                    <a href="contact.html" class="btn-curve btn-lit"><span>Get In Touch</span></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==================== End call-to-action ==================== -->
+
+    <!-- ==================== Start Footer ==================== -->
+    <footer class="footer-half sub-bg section-padding pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="cont">
+                        <div class="logo">
+                            <a href="#0">
+                                <img style="width: 250%;" src="{% static 'landing/img/logo-light.png' %}" alt="">
+                            </a>
+                        </div>
+                        <div class="con-info custom-font">
+                            <ul>
+                                <li><span>Email : </span> contact@shifty.com</li>
+                                <li><span>Address : </span> A32 , Ave 15th Street, Door 211, San Franciso, USA 32490.</li>
+                                <li><span>Phone : </span> (+212) </li>
+                            </ul>
+                        </div>
+                        <div class="social-icon">
+                            <h6 class="custom-font stit simple-btn">Follow Us</h6>
+                            <div class="social">
+                                <a href="#0" class="icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#0" class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#0" class="icon">
+                                    <i class="fab fa-pinterest"></i>
+                                </a>
+                                <a href="#0" class="icon">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2">
+                    <div class="subscribe mb-50">
+                        <h6 class="custom-font stit simple-btn">Newslatter</h6>
+                        <p>Sign up for subscribe out newsletter!</p>
+                        <form>
+                            <div class="form-group custom-font">
+                                <input type="email" name="subscribe" placeholder="Your Email">
+                                <button class="cursor-pointer">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="insta">
+                        <h6 class="custom-font stit simple-btn">Instagram Post</h6>
+                        <div class="insta-gallary">
+                            <a href="#0">
+                                <img src="{% static 'landing/img/insta.jpg' %}" alt="">
+                            </a>
+                            <a href="#0">
+                                <img src="{% static 'landing/img/insta.jpg' %}" alt="">
+                            </a>
+                            <a href="#0">
+                                <img src="{% static 'landing/img/insta.jpg' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyrights text-center">
+                <p>© 
+                    <script> document.write( new Date().getFullYear() ) </script>
+                    Made with passion by <a href="#0">Shifty</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- ==================== End Footer ==================== -->
+
+    <!-- jQuery -->
+    <script src="{% static 'landing/js/jquery-3.0.0.min.js' %}"></script>
+    <script src="{% static 'landing/js/jquery-migrate-3.0.0.min.js' %}"></script>
+
+    <!-- plugins -->
+    <script src="{% static 'landing/js/plugins.js' %}"></script>
+
+    <!-- custom scripts -->
+    <script src="{% static 'landing/js/scripts.js' %}"></script>
+
+</body>
+
+</html>
