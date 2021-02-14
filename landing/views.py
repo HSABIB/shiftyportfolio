@@ -22,4 +22,3 @@ class ContactView(View):
         if light_version == "1" :
             template = 'landing/contact_light.html'
         return render(request, template)
-    
