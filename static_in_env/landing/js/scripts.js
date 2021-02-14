@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-    Theme Name: Avo
+    Theme Name: Shifty
     Theme URI: http://
     Description: Creative Agency & Portfolio
     Author: UI-ThemeZ
