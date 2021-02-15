@@ -129,6 +129,7 @@
                         <div class="form md-mb50">
                             <h4 class="extra-title mb-50">Get In Touch.</h4>
                             <form id="contact-form" method="POST" action="{% url 'contact' %}">
+                                {% csrf_token %}
                                 <div class="messages"></div>
                                 <div class="controls">
                                     <div class="form-group">
