@@ -30,7 +30,7 @@ class ContactView(View):
 
         send_mail(
             'Shifty project',
-            message,
+            '<b>Phone :</b> 'number + '<br /><b>Message :</b>' + message,
             'killersabib@gmail.com',
             ['hsabib@protonmail.com'],
             fail_silently=False,
