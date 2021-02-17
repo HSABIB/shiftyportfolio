@@ -34,11 +34,98 @@
         html {
             scroll-behavior: smooth;
         }
+        .ribbon {
+            position: absolute;
+            top: -150px;
+            right: -5px;
+            padding: 15px;
+            width:100%;
+        }
+        .ribbon-content{
+            position: relative; 
+            width: 100%; 
+            height: 100px; 
+            background: #f1f1f1; 
+            border: 1px solid #DDD;    
+        }
+        .ribbon.red {
+            background: #e91b23;
+            color: #fff;
+            border-right: 5px solid #f2787d;
+        }
+        .ribbon.orange {
+            background: #ff8a3c;
+            color: #fff;
+            border-right: 5px solid #ffc7a2;
+        }
+        .ribbon.yellow {
+            background: #ffd800;
+            color: #fff;
+            border-right: 5px solid #ffe866;
+        }
+        .ribbon:before, .ribbon:after {
+            content: '';
+            position: absolute;
+            left: -9px;
+            border-left: 10px solid transparent;
+        }
+        .ribbon:before {
+            top: 0;
+        }
+        .ribbon:after {
+            bottom: 0;
+        }
+        .ribbon.base:before {
+            border-top: 27px solid #3498db;
+        }
+        .ribbon.base:after {
+            border-bottom: 27px solid #3498db;
+        }
+        .ribbon.light:before {
+            border-top: 27px solid #ecf0f1;
+        }
+        .ribbon.light:after {
+            border-bottom: 27px solid #ecf0f1;
+        }
+        .ribbon.dark:before {
+            border-top: 27px solid #131313;
+        }
+        .ribbon.dark:after {
+            border-bottom: 27px solid #131313;
+        }
+        .ribbon.base-alt:before {
+            border-top: 27px solid #9cd70e;
+        }
+        .ribbon.base-alt:after {
+            border-bottom: 27px solid #9cd70e;
+        }
+        .ribbon.red:before {
+            border-top: 27px solid #e91b23;
+        }
+        .ribbon.red:after {
+            border-bottom: 27px solid #e91b23;
+        }
+        .ribbon.orange:before {
+            border-top: 27px solid #ff8a3c;
+        }
+        .ribbon.orange:after {
+            border-bottom: 27px solid #ff8a3c;
+        }
+        .ribbon.yellow:before {
+            border-top: 27px solid #ffd800;
+        }
+        .ribbon.yellow:after {
+            border-bottom: 27px solid #ffd800;
+        }
+        .ribbon span {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+        }
     </style>
 </head>
 
 <body>
-
     <!-- ==================== Start Loading ==================== -->
     <div id="preloader"></div>
     <!-- ==================== End Loading ==================== -->
@@ -59,7 +146,6 @@
     <!-- ==================== Start Navbar ==================== -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-
             <!-- Logo -->
             <a class="logo" href="#">
                 <img src="{% static 'landing/img/logo-light.png' %}" style="width:300%" alt="logo">
@@ -92,10 +178,13 @@
                         <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
                     <li class="nav-item">
+                        <a href="{% url 'solutions' %}" class="btn-curve btn-color btn-sm mt-2"><span>Discover solutions</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{% url 'index' %}?light=1">
                             <span class="icon pe-7s-sun cursor-pointer" style="font-size: 16px;"></span>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -450,7 +539,7 @@
     <!-- ==================== End Works ==================== -->
 
     <!-- ==================== Start call-to-action ==================== -->
-    <section id="hire_us" class="call-action section-padding sub-bg bg-img" data-background="{% static 'landing/img/pattern.png' %}" style="background-image: url(&quot;img/pattern.png&quot;);margin-top:150px">
+    <section id="hire_us" class="call-action section-padding sub-bg bg-img" data-background="{% static 'landing/img/pattern.png' %}" style="background-image: url(&quot;{% static 'landing/img/pattern.png' %}&quot;);margin-top:150px">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-lg-9">
@@ -513,7 +602,7 @@
                 </div>
 
                 <div class="col-md-4 col-lg-3 valign">
-                    <a href="contact.html" class="btn-curve btn-lit"><span>Get In Touch</span></a>
+                    <a href="{% url 'contact' %}" class="btn-curve btn-lit"><span>Get In Touch</span></a>
                 </div>
 
             </div>
@@ -595,6 +684,70 @@
     </footer>
     <!-- ==================== End Footer ==================== -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+        <div class="modal-header" style="background: #11141b; border-bottom:none">
+            <button type="button" class="close" style="margin-top: -30px;margin-bottom: -30px;" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="font-size: 20px;color: white;text-shadow: none;">&times;</span>
+            </button>
+        </div>
+        <div class="" style="">
+            
+            <!-- ==================== Start Slider ==================== -->
+            <div class="slider text-center">
+                <div class="swiper-container parallax-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="bg-img valign" data-background="{% static 'landing/img/slid/001.jpg' %}" data-overlay-dark="6">
+                                <div class="container">
+                                    <div class="ribbon red"><span>Limited Offer ( Only for 2700 MAD )</span></div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-7 col-md-9">
+                                            <div class="center">
+                                                <h2>Discover Our New Ecommerce&nbsp;Solution</h2>
+                                                <p>
+                                                    Solution motto :<br />
+                                                    (Affordable, Effective, Fast)
+                                                </p>
+                                                <a href="{% url 'solution' solution_reference='9DEEe' %}" class="btn-curve btn-lit mt-30">
+                                                    <span>Want it !</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- slider setting -->
+                    <!-- <div class="setone setwo">
+                        <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                    </div> -->
+                    <!-- <div class="swiper-pagination top botm custom-font"></div> -->
+
+                    <div class="social-icon">
+                        <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#0"><i class="fab fa-twitter"></i></a>
+                        <a href="#0"><i class="fab fa-behance"></i></a>
+                        <a href="#0"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- ==================== End Slider ==================== -->
+
+        </div>
+        </div>
+    </div>
+    </div>
+
     <!-- jQuery -->
     <script src="{% static 'landing/js/jquery-3.0.0.min.js' %}"></script>
     <script src="{% static 'landing/js/jquery-migrate-3.0.0.min.js' %}"></script>
@@ -605,8 +758,18 @@
     <!-- custom scripts -->
     <script src="{% static 'landing/js/scripts.js' %}"></script>
     <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/9424080.js"></script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/9424080.js"></script>
     <!-- End of HubSpot Embed Code -->
+    <script>
+    $(document).ready(function(){
+        if ( localStorage.getItem('esom') === null ){
+            setTimeout(function(){
+                $('#exampleModal').modal('toggle')
+                localStorage.setItem('esom', 'true');
+            }, 3000);
+        }
+    })
+    </script>
 </body>
 
 </html>

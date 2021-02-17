@@ -12,6 +12,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+INSTALLED_APPS += [
+    'core.apps.CoreConfig',
+    'projects.apps.ProjectsConfig',
+]
+INSTALLED_APPS += [
+    'django_extensions',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
