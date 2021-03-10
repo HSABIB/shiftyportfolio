@@ -18,67 +18,67 @@ list_projects = [
         'slogan'    :      "Ecommerce Solution",
         'flabel'    :      "Ecommerce",
         'llabel'    :      "Solution",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613458941/001_swvfex.jpg",
+        'miniature' :      "001.jpg",
         'categories':       [2, 3, 4, 6]
     },{
         'slogan'    :      "Custom shopify application",
         'flabel'    :      "Shopify",
         'llabel'    :      "App",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613458590/002_kzsjbl.jpg",
+        'miniature' :      "002.jpg",
         'categories':       [2, 3, 4, 5, 6]
     },{
         'slogan'    :      "Web application",
         'flabel'    :      "Web",
         'llabel'    :      "Application",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613458705/muhannad-ajjan-sL2BRR1cuvM-unsplash_vslbes.jpg",
+        'miniature' :      "003.jpg",
         'categories':       [2, 3, 4, 6, 8]
     },{
         'slogan'    :      "Mobile application",
         'flabel'    :      "Mobile",
         'llabel'    :      "Application",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613458753/markus-winkler-4TBdESUNuFg-unsplash_fm7pnl.jpg",
+        'miniature' :      "004.jpg",
         'categories':       [3, 4, 6, 8]
     },{
         'slogan'    :      "Data analysis",
         'flabel'    :      "Data",
         'llabel'    :      "Analysis",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613458274/003_cc5vp7.jpg",
+        'miniature' :      "005.jpg",
         'categories':       [0, 2, 8, 5]
     },{
         'slogan'    :      "Cloud Migration & Admin Services",
         'flabel'    :      "Cloud",
         'llabel'    :      "Services",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613459799/c-dustin-K-Iog-Bqf8E-unsplash_pqzpsd.jpg  ",
+        'miniature' :      "006.jpg",
         'categories':       [4, 6, 8]
     },{
         'slogan'    :      "Architecture, Data & Platform Design",
         'flabel'    :      "Architecture",
         'llabel'    :      "Platform",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613460027/luke-chesser-JKUTrJ4vK00-unsplash_e7rfjp.jpg",
+        'miniature' :      "007.jpg",
         'categories':       [8, 6, 4, 2, 3]
     },{
         'slogan'    :      "Third-Party Software Integration",
         'flabel'    :      "Software",
         'llabel'    :      "Integration",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613459814/jj-ying-7JX0-bfiuxQ-unsplash_mvbcyd.jpg",
+        'miniature' :      "008.jpg",
         'categories':       [4, 2]
     },{
         'slogan'    :      "Business Intelligence and Optimization",
         'flabel'    :      "Business",
         'llabel'    :      "Intelligence",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613459863/floriane-vita-FyD3OWBuXnY-unsplash_zccfpx.jpg",
+        'miniature' :      "009.jpg",
         'categories':       [7, 8, 5]
     },{
         'slogan'    :      "Artificial Intelligence and Machine learning",
         'flabel'    :      "Artificial",
         'llabel'    :      "Intelligence",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613459931/joel-filipe-VuwAfoHpxgs-unsplash_xhninp.jpg",
+        'miniature' :      "010.jpg",
         'categories':       [0, 7, 6, 5]
     },{
         'slogan'    :      "Internet of things",
         'flabel'    :      "Internet",
         'llabel'    :      "Of Things",
-        'miniature' :      "https://res.cloudinary.com/dbarj1xvr/image/upload/v1613458880/thisisengineering-raeng-32PpagSzeGs-unsplash_bj2b78.jpg",
+        'miniature' :      "011.jpg",
         'categories':       [1, 7, 6]
     }
 ]

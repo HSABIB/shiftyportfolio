@@ -220,13 +220,21 @@
                             <h4 class="extra-title mb-50">Contact Info.</h4>
                             <h3 class="custom-font wow" data-splitting>Let's Talk.</h3>
                             <div class="item mb-40">
-                                <h5><a href="#0">contact@shiftysolutions.com</a></h5>
-                                <h5>+(212) 640.845.583</h5>
+                                <h5>
+                                    <a href="mail:contact@shiftysolutions.com">
+                                        contact@shiftysolutions.com
+                                    </a>
+                                </h5>
+                                <h5>
+                                    <a href="tel:+212640835584">
+                                        +(212) 640.835.584
+                                    </a>
+                                </h5>
                             </div>
                             <div class="social mt-50">
                                 <a href="#0" class="icon"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#0" class="icon"><i class="fab fa-twitter"></i></a>
-                                <a href="#0" class="icon"><i class="fab fa-pinterest"></i></a>
+                                <a href="https://www.pinterest.fr/hsabib/" class="icon"><i class="fab fa-pinterest"></i></a>
                                 <a href="#0" class="icon"><i class="fab fa-behance"></i></a>
                             </div>
                         </div>
@@ -260,23 +268,23 @@
     <script src="{% static 'landing/js/plugins.js' %}"></script>
     <!-- custom scripts -->
     <script src="{% static 'landing/js/scripts.js' %}"></script>
-    <!-- Start of HubSpot Embed Code -->
+
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/9424080.js"></script>
-    <!-- End of HubSpot Embed Code -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <script>
     $(document).ready(function(){
-        $('.select2').select2({
-            width: 'resolve',
-        });
+        $('.select2').select2({width: 'resolve'});
     });
     </script>
     {% if request.GET.msg_sent == "true" %}
     <script>
     swal({
         message : 'Good job!',
-        text : 'Your message has been sent succefully !',
+        text : 'Item has been added to cart succefully !',
         icon : 'success',
         buttons: false,
     })
