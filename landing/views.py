@@ -14,10 +14,10 @@ from projects.models import Project
 class IndexView(View):
     def get(self, request) :
         template = 'landing/index_dark.html'
-        light_version = request.GET.get('light', None)
-        if light_version == "1" :
+        mode_version = request.GET.get('mode', None)
+        if mode_version == "light" :
             template = 'landing/index_light.html'
-        return render(request, template)
+        return render(request, template,  { 'projects' : Project.objects.all() })
     
 class ContactView(View):
     def get(self, request) :
@@ -27,7 +27,7 @@ class ContactView(View):
             template = 'landing/contact_light.html'
 
         context = {
-            'solutions' : Project.objects.all()
+            'projects' : Project.objects.all()
         }
         return render(request, template, context)
     def post(self, request):
@@ -59,17 +59,12 @@ class ContactView(View):
         )
         return redirect('/contact/?msg_sent=true')
 
-class SolutionsView(View):
-    template = 'landing/solutions.html'
-    def get(self, request) :
-        context = {
-            'solutions' : Project.objects.all()
-        }
-        return render(request, self.template, context)
-
 class SolutionView(View):
-    template = 'landing/solution.html'
-    def get(self, request, *args, **kwargs) :
-        solution_reference= kwargs.get('solution_reference')
-        context = { 'solution' : get_object_or_404(Project, reference=solution_reference) }
-        return render(request, self.template, context)
+    template = 'landing/solution_dark.html'
+    def get(self, request) :
+        mode_version = request.GET.get('mode', None)
+        if mode_version == "light" :
+            template = 'landing/solution_light.html'
+
+        project_reference = request.GET.get('project') 
+        return render(request, self.template, { 'project' : get_object_or_404(Project, reference=project_reference, deleted=False) })

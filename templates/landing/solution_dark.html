@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+<head>
+    <!-- Metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- <meta name="keywords" content="HTML5 Template Shifty onepage themeforest" /> -->
+    <!-- <meta name="description" content="Shifty - Onepage Multi-Purpose HTML5 Template" /> -->
+    <meta name="author" content="" />
+    <!-- Title  -->
+    <title>Shifty solutions</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://res.cloudinary.com/dchmztvzz/image/upload/v1622214139/logos/logo_white-1_tiqf6r.png" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <!-- Plugins -->
+    <link rel="stylesheet" href="{% static 'landing/css/plugins.css' %}" />
+    <!-- Core Style Css -->
+    <link rel="stylesheet" href="{% static 'landing/css/style_dark.css' %}" />
+    <style>
+        .mouse_scroll {
+            z-index: 9999998;
+            display: block;
+            margin: 0 auto;
+            width: 24px;
+            right: 50%;
+            height: 100px;
+            bottom: 0;
+            position: absolute;
+            margin-top: 125px;
+        }
+
+
+        .m_scroll_arrows
+        {
+        display: block;
+        width: 5px;
+        height: 5px;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        transform: rotate(45deg);
+        
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        margin: 0 0 3px 4px;
+        
+        width: 16px;
+        height: 16px;
+        }
+
+
+        .unu
+        {
+        margin-top: 1px;
+        }
+
+        .unu, .doi, .trei
+        {
+            -webkit-animation: mouse-scroll 1s infinite;
+            -moz-animation: mouse-scroll 1s infinite;
+            animation: mouse-scroll 1s infinite;
+        
+        }
+
+        .unu
+        {
+        -webkit-animation-delay: .1s;
+        -moz-animation-delay: .1s;
+        -webkit-animation-direction: alternate;
+        
+        animation-direction: alternate;
+        animation-delay: alternate;
+        }
+
+        .doi
+        {
+        -webkit-animation-delay: .2s;
+        -moz-animation-delay: .2s;
+        -webkit-animation-direction: alternate;
+        
+        animation-delay: .2s;
+        animation-direction: alternate;
+        
+        margin-top: -6px;
+        }
+
+        .trei
+        {
+        -webkit-animation-delay: .3s;
+        -moz-animation-delay: .3s;
+        -webkit-animation-direction: alternate;
+        
+        animation-delay: .3s;
+        animation-direction: alternate;
+        
+        
+        margin-top: -6px;
+        }
+
+        .mouse {
+        height: 42px;
+        width: 24px;
+        border-radius: 14px;
+        transform: none;
+        border: 2px solid white;
+        top: 170px;
+        }
+
+        .wheel {
+        height: 5px;
+        width: 2px;
+        display: block;
+        margin: 5px auto;
+        background: white;
+        position: relative;
+        
+        height: 4px;
+        width: 4px;
+        border: 2px solid #fff;
+        -webkit-border-radius: 8px;
+                border-radius: 8px;
+        }
+
+        .wheel {
+        -webkit-animation: mouse-wheel 0.6s linear infinite;
+        -moz-animation: mouse-wheel 0.6s linear infinite;
+        animation: mouse-wheel 0.6s linear infinite;
+        }
+
+        @-webkit-keyframes mouse-wheel{
+        0% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+            -webkit-transform: translateY(6px);
+            -ms-transform: translateY(6px);
+            transform: translateY(6px);
+        }
+        }
+        @-moz-keyframes mouse-wheel {
+        0% { top: 1px; }
+        25% { top: 2px; }
+        50% { top: 3px;}
+        75% { top: 2px;}
+        100% { top: 1px;}
+        }
+        @-o-keyframes mouse-wheel {
+
+        0% { top: 1px; }
+        25% { top: 2px; }
+        50% { top: 3px;}
+        75% { top: 2px;}
+        100% { top: 1px;}
+        }
+        @keyframes mouse-wheel {
+
+        0% { top: 1px; }
+        25% { top: 2px; }
+        50% { top: 3px;}
+        75% { top: 2px;}
+        100% { top: 1px;}
+        }
+
+        @-webkit-keyframes mouse-scroll {
+
+        0%   { opacity: 0;}
+        50%  { opacity: .5;}
+        100% { opacity: 1;}
+        }
+        @-moz-keyframes mouse-scroll {
+
+        0%   { opacity: 0; }
+        50%  { opacity: .5; }
+        100% { opacity: 1; }
+        }
+        @-o-keyframes mouse-scroll {
+
+        0%   { opacity: 0; }
+        50%  { opacity: .5; }
+        100% { opacity: 1; }
+        }
+        @keyframes mouse-scroll {
+
+        0%   { opacity: 0; }
+        50%  { opacity: .5; }
+        100% { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ==================== Start Loading ==================== -->
+    <div id="preloader"></div>
+    <!-- ==================== End Loading ==================== -->
+
+    <!-- ==================== Start progress-scroll-button ==================== -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- ==================== End progress-scroll-button ==================== -->
+
+    <!-- ==================== Start cursor ==================== -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- ==================== End cursor ==================== -->
+
+    <!-- ==================== Start Navbar ==================== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <a class="logo" href="#">
+                <img src="https://res.cloudinary.com/dchmztvzz/image/upload/v1623450508/logos/logo-light_jkpwnt.png" style="width:300%" alt="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}#about">À propos de nous</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}#skills">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}#results">Résultats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li class="nav-item valign">
+                        <a href="{% url 'contact' %}" class="btn-curve btn-color btn-radius">
+                            <span>Contact us now</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ==================== End Navbar ==================== -->
+
+    <!-- ==================== Start wrapper ==================== -->
+    <header class="freelancer sub-bg valign bg-img parallaxie" data-background="{{ project.miniature }}" data-overlay-dark="4" style="background-image: url(&quot;img/slid/freelancer.jpg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center 0px;">
+        <div class="mouse_scroll">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div>
+                <span class="m_scroll_arrows unu"></span>
+                <span class="m_scroll_arrows doi"></span>
+                <span class="m_scroll_arrows trei"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="cont">
+                        <h6 style="font-weight: bold;">À partir de {{ project.price }}MAD</h6>
+                        <h1>{{ project.slogan }}.</h1>
+                        
+                        {% if project.tech_body != None and request.GET.overview != "technical" %}
+                        <a href="{% url 'solution' %}?project={{ request.GET.project }}&overview=technical" class="btn-curve btn-color btn-radius mt-4">
+                            <span class="icon pe-7s-tools"></span>
+                            <span>Presentation technique</span>
+                        </a>
+                        {% endif %}
+                        {% if request.GET.overview == "technical" %}
+                        <a href="{% url 'solution' %}?project={{ request.GET.project }}&overview=presentation" class="btn-curve btn-color btn-radius mt-4">
+                            <span class="icon icon-lg pe-7s-global" style="font-size:20px"></span>
+                            <span>Presentation du projet</span>
+                        </a>
+                        {% endif %}
+
+                        <div class="social-icon">
+                            <a href="#0" class="icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#0" class="icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#0" class="icon">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                            <a href="#0" class="icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="wrapper">
+        {% if request.GET.overview == "technical" %}
+        {{ project.tech_body|safe }}
+        {% else %}
+        {{ project.body|safe }}
+        {% endif %}
+        <!-- ==================== Start next-prog ==================== -->
+        <section class="next-prog section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="box">
+                            <div class="bg-img valign" data-background="{{project.miniature}}"
+                                data-overlay-dark="4">
+                                <div class="caption ontop valign">
+                                    <div class="o-hidden full-width">
+                                        <h1>
+                                            <a href="#0">
+                                                <div class="stroke">{{ project.slogan }}.</div>
+                                            </a>
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div class="copy-cap valign">
+                                    <div class="cap full-width">
+                                        <h1>
+                                            <a href="#0">
+                                                <span>{{ project.slogan }}.</span>
+                                            </a>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== End next-prog ==================== -->
+
+        <!-- ==================== Start Footer ==================== -->
+        <footer class="footer-half sub-bg">
+            <div class="container">
+                <div class="copyrights text-center mt-0">
+                    <p>
+                        © 
+                        <script> document.write( new Date().getFullYear() ) </script>
+                        Made with passion by 
+                        <a href="#0">Shifty solutions</a>.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- ==================== End Footer ==================== -->
+    </div>
+    <!-- ==================== End wrapper ==================== -->
+
+    <!-- jQuery -->
+    <script src="{% static 'landing/js/jquery-3.0.0.min.js' %}"></script>
+    <script src="{% static 'landing/js/jquery-migrate-3.0.0.min.js' %}"></script>
+
+    <!-- plugins -->
+    <script src="{% static 'landing/js/plugins.js' %}"></script>
+
+    <!-- custom scripts -->
+    <script src="{% static 'landing/js/scripts.js' %}"></script>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/9424080.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z1X6KSP4T"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7Z1X6KSP4T');
+    </script>
+
+</body>
+
+</html>

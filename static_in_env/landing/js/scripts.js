@@ -1,15 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-    Theme Name: Shifty
-    Theme URI: http://
-    Description: Creative Agency & Portfolio
-    Author: UI-ThemeZ
-    Author URI: http://themeforest.net/user/UI-ThemeZ
-    Version: 1.0
-
------------------------------------------------------------------------------------*/
-
-
 $(function () {
 
     "use strict";
@@ -247,7 +235,7 @@ $(function () {
                 slidesPerView: 3,
                 spaceBetween: 0
             },
-            1024: {
+            1400: {
                 slidesPerView: 4,
                 spaceBetween: 0
             }
@@ -576,6 +564,7 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('#navi').outerHeight();
+
 $(window).on("scroll", function (event) {
     didScroll = true;
 });
@@ -715,7 +704,6 @@ $(window).scroll(function () {
 
 
 /* ===============================  Swiper showcases with data  =============================== */
-
 
 $('[data-carousel="swiper"]').each(function () {
 

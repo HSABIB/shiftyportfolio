@@ -1,7 +1,5 @@
 from django.db import models
 
-from .views import _gref
-
 class BaseModel(models.Model):
     reference = models.CharField(max_length = 100, unique=True)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
