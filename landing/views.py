@@ -22,10 +22,6 @@ class IndexView(View):
 class ContactView(View):
     def get(self, request) :
         template = 'landing/contact_dark.html'
-        light_version = request.GET.get('light', None)
-        if light_version == "1" :
-            template = 'landing/contact_light.html'
-
         context = {
             'projects' : Project.objects.all()
         }
@@ -60,11 +56,7 @@ class ContactView(View):
         return redirect('/contact/?msg_sent=true')
 
 class SolutionView(View):
-    template = 'landing/solution_dark.html'
     def get(self, request) :
-        mode_version = request.GET.get('mode', None)
-        if mode_version == "light" :
-            template = 'landing/solution_light.html'
-
+        template = 'landing/solution_dark.html'
         project_reference = request.GET.get('project') 
-        return render(request, self.template, { 'project' : get_object_or_404(Project, reference=project_reference, deleted=False) })
+        return render(request, template, { 'project' : get_object_or_404(Project, reference=project_reference, deleted=False) })

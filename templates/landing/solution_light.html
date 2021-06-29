@@ -250,6 +250,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'solution' %}?project={{ request.GET.project }}">
+                            <span class="icon pe-7s-moon cursor-pointer" style="font-size: 16px;"></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -375,6 +380,11 @@
 
     <!-- custom scripts -->
     <script src="{% static 'landing/js/scripts.js' %}"></script>
+    <script>
+    $(document).ready(function(){
+        $('.btn-lit').addClass('btn-color')
+    })
+    </script>
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/9424080.js"></script>
 
