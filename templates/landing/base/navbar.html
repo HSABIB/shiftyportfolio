@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg" style="z-index: 99999999999999999999;">
+    <div class="container">
+        <!-- Logo -->
+        <a class="logo" href="/">
+            <img class="logo-img" src="https://res.cloudinary.com/dchmztvzz/image/upload/v1624980490/developement/logos/New_Project_6_u70sg5.png" style="width: 500%;" alt="logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Page d'accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">À propos de nous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services' %}">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'works' %}">Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link toggle-mode" href=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

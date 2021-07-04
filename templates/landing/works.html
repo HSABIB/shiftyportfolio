@@ -1,0 +1,84 @@
+{% extends 'landing/base/index.html' %}
+
+
+{% block extrastyle %}{% endblock extrastyle %}
+
+{% block extrascripts %}{% endblock extrascripts %}
+
+{% block pagecontent %}
+{% load static %}
+<!-- ==================== Start header ==================== -->
+<header class="works-header fixed-slider hfixd valign">
+    <div class="container">
+        <div class="mouse_scroll" style="bottom: 50px">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div>
+                <span class="m_scroll_arrows unu"></span>
+                <span class="m_scroll_arrows doi"></span>
+                <span class="m_scroll_arrows trei"></span>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-md-11 static">
+                <div class="capt mt-50">
+                    <div class="parlx" style="transform: translate3d(0px, 0px, 0px); opacity: 1;">
+                        <h2 class="custom-font">Les Étoiles Sont À Portée De Main</h2>
+                        <p>Notre équipe voit grand, vise haut et travaille dur pour vous obtenir les résultats que vous souhaitez.</p>
+                    </div>
+                    <div class="bactxt custom-font valign">
+                        <span class="full-width">Travaux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ==================== End header ==================== -->
+
+<div class="main-content">
+
+    <!-- ==================== Start works ==================== -->
+
+    <section class="portfolio section-padding pb-70">
+        <div class="container">
+            <div class="row">
+
+                <!-- filter links -->
+                <div class="filtering text-right smplx col-12">
+                    <div class="filter">
+                        <span data-filter="*" class="active">Tous</span>
+                        {% for category in categories %}
+                        <span data-filter=".{{ category.reference }}">{{ category.label }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- gallery -->
+                <div class="gallery full-width">
+                    {% for project in projects %}
+                    <!-- gallery item -->
+                    <div class="col-md-6 col-12 items {% for category in project.get_categories %}{{ category.reference }} {% endfor %}">
+                        <div class="item-img wow fadeInUp" data-wow-delay=".4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
+                            <a href="#">
+                                <img src="{{ project.get_scaled_miniature }}" alt="image">
+                                
+                            </a>
+                        </div>
+                        <div class="cont">
+                            <h6>{{ project.slogan }}</h6>
+                            <span><a href="#0">À partir de </a>, <a href="#0" style="color: #75dab4">{{ project.price }}&nbsp;MAD</a></span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== End works ==================== -->
+
+</div>
+{% endblock pagecontent %}

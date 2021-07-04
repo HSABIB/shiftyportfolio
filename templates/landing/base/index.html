@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+<head>
+    {% include "landing/base/head.html" %}
+    {% block extrametas %}{% endblock extrametas %}
+    {% block extrastyle %}{% endblock extrastyle %}
+    {% block extrahead %}{% endblock extrahead %}
+    
+    <!-- Title  -->
+    <title>Shifty | {% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+    {% include "landing/base/loaderNcursor.html" %}
+    <!-- ==================== Start Navbar ==================== -->
+    {% include "landing/base/navbar.html" %}
+    <!-- ==================== End Navbar ==================== -->
+
+    {% block pagecontent %}
+    {% endblock pagecontent %}
+
+    <!-- ==================== Start Footer ==================== -->
+    {% include "landing/base/footer.html" %}
+    <!-- ==================== End Footer ====================== -->
+
+    <!-- ==================== Start Scripts ==================== -->
+    {% include "landing/base/scripts.html" %}
+    <!-- ==================== End Scripts ====================== -->
+    {% block extrascripts %}{% endblock extrascripts %}
+
+    {% block extramodals %}{% endblock extramodals %}
+</body>

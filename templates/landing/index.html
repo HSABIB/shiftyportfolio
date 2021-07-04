@@ -1,0 +1,414 @@
+{% extends 'landing/base/index.html' %}
+
+{% block pagecontent %}
+{% load static %}
+<!-- ==================== Start Slider ==================== -->
+<header class="slider-bus position-re valign">
+    <div class="mouse_scroll">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <div>
+            <span class="m_scroll_arrows unu"></span>
+            <span class="m_scroll_arrows doi"></span>
+            <span class="m_scroll_arrows trei"></span>
+        </div>
+    </div>
+    <div class="container ontop">
+        <div class="swiper-container swiper-content">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                            <div class="caption">
+                                <h1>
+                                    <div class="thin">Automatisation</div>Affaires
+                                </h1>
+                                <p>
+                                    Fatigué de toute la microgestion au sein de votre entreprise ?
+                                    <br />
+                                    Remettez-le nous. nous allons nous en occuper avec seulement quelques lignes de code.
+                                </p>
+                                <a href="#services" class="btn-curve btn-color btn-radius mt-30">
+                                    <span>Découvrir nos services</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                            <div class="caption">
+                                <h1>
+                                    <div class="thin">Superbes</div>Apps&nbsp;Génies
+                                </h1>
+                                <p>
+                                    Vous avez une idée d'entreprise futuriste qui a besoin d'une application?
+                                    <br />
+                                    Nous donnerons vie à vos idées
+                                    <br />
+                                </p>
+                                <a href="#services" class="btn-curve btn-color btn-radius mt-30">
+                                    <span>Découvrir nos services</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                            <div class="caption">
+                                <h1 data-splitting>
+                                    <div class="thin">Solutions</div>Originales
+                                </h1>
+                                <p>
+                                    vous avez besoin de repenser votre nouveau projet?<br />
+                                    nouvelle stratégie visuelle, structure ux?<br />
+                                    vous avez de bonnes idées de collaboration !
+                                </p>
+                                <a href="#services" class="btn-curve btn-color btn-radius mt-30">
+                                    <span>Découvrir nos services</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-container swiper-img">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide bg-img" data-background="{% static 'landing/img/slid/1.jpg' %}" data-overlay-dark="6"></div>
+            <div class="swiper-slide bg-img" data-background="{% static 'landing/img/slid/2.jpg' %}" data-overlay-dark="6"></div>
+            <div class="swiper-slide bg-img" data-background="{% static 'landing/img/slid/3.jpg' %}" data-overlay-dark="6"></div>
+        </div>
+    </div>
+    <div class="curve-bg bg-img" data-background="{% static 'landing/img/business-bg.png' %}"></div>
+
+    <!-- slider setting -->
+    <div class="setone">
+        <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+    </div>
+    <div class="swiper-pagination custom-font"></div>
+</header>
+<!-- ==================== End Slider ==================== -->
+
+<!-- ==================== Start about ==================== -->
+<section id="about" class="about section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 valign">
+                <div class="content">
+                    <div class="sub-title">
+                        <h6>À props de nous</h6>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h3 class="co-tit custom-font wow" data-splitting>
+                        Nos 10 ans d'expérience. Nous l'avons dépensé pour faire briller et croître différentes entreprises.
+                    </h3>
+                    <p class="wow fadeInUp" data-wow-delay=".4s">
+                        SHIFTY SOLUTIONS. 
+                        Nous automatisons les entreprises, créons des marques remarquables et des applications de pointe. 
+                        parmi une pléthore de services, la conception et le développement de sites Web, les applications sur mesure, 
+                        les ERP, les CRM, les solutions de commerce électronique, les applications business-to-business, 
+                        les applications business-to-client, 
+                        l'hébergement géré et la gestion de portail Internet sont peu nombreux que nous proposons.
+                    </p>
+                    <p class="mt-10 wow fadeInUp" data-wow-delay=".4s">
+                        Des clients satisfaits du monde entier témoignent de la qualité de notre travail.
+                    </p>
+                    <a href="{% url 'about' %}" class="simple-btn custom-font mt-30 wow" data-splitting><span>Savoir plus</span></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="blc-img">
+                    <div class="bimg wow imago">
+                        <img src="{% static 'landing/img/intro/3.jpg' %}" alt="">
+                    </div>
+                    <div class="skills-circle wow fadeInUp" data-wow-delay=".8">
+                        <div class="item">
+                            <div class="skill" data-value="0.90">
+                                <span class="custom-font">90%</span>
+                            </div>
+                            <div class="cont">
+                                <span>Consultations en</span>
+                                <h6>Projects</h6>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="skill" data-value="0.98">
+                                <span class="custom-font">98%</span>
+                            </div>
+                            <div class="cont">
+                                <span>Developement De</span>
+                                <h6>Solutions</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================== End about ==================== -->
+
+<!-- ==================== Start Services ==================== -->
+<section id="skills" class="services section-padding sub-bg">
+    <div class="container">
+        <div class="sec-head custom-font tr-head">
+            <h6>Meilleures caractéristiques</h6>
+            <h3>Compétences.</h3>
+            <span class="tbg">Compétences</span>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                <div class="step-item xbottom">
+                    <span class="icon pe-7s-magic-wand"></span>
+                    <h6 style="white-space: nowrap;">Design Graphique</h6>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+                <div class="step-item xcolor">
+                    <span class="icon pe-7s-phone"></span>
+                    <h6 style="white-space: nowrap;">Développement&nbsp;Web&nbsp;&&nbsp;Mobile</h6>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay=".9s">
+                <div class="step-item xtop">
+                    <span class="icon pe-7s-cloud"></span>
+                    <h6 style="white-space: nowrap;">Cloud&nbsp;&&nbsp;DevOps</h6>
+                </div>
+            </div>
+        </div>
+        <div class="smore custom-font">
+            <a href="{% url 'services' %}">Savoir plus</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+        </div>
+    </div>
+</section>
+<!-- ==================== End Services ==================== -->
+
+<!-- ==================== Start block-sec ==================== -->
+<section id="results" class="block-sec">
+    <div class="background bg-img section-padding pb-0" data-background="{% static 'landing/img/pattern.png' %}">
+        <div class="container">
+            <div class="number-sec">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item no-bord">
+                            <span class="icon pe-7s-smile"></span>
+                            <h3 class="custom-font"><span class="count">100+</span></h3>
+                            <p class="wow txt" data-splitting>Clients&nbsp;Satisfaits</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item">
+                            <span class="icon pe-7s-portfolio"></span>
+                            <h3 class="custom-font"><span class="count">150+</span></h3>
+                            <p class="wow txt" data-splitting>Projets&nbsp;Complets</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item">
+                            <span class="icon pe-7s-coffee"></span>
+                            <h3 class="custom-font"><span class="count">250+</span> k</h3>
+                            <p class="wow txt" data-splitting>Tasses&nbsp;de&nbsp;café</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item">
+                            <span class="icon pe-7s-star"></span>
+                            <h3 class="custom-font"><span class="count">180+</span></h3>
+                            <p class="wow txt" data-splitting>Consultations&nbsp;terminées</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="showreel">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="video-box">
+                            <div class="tit-text">
+                                <h3 class="wow" data-splitting>ShiftySolutions</h3>
+                            </div>
+                            <div class="wow imago">
+                                <div class="img">
+                                    <img src="{% static 'landing/img/vid.jpg' %}" alt="">
+                                </div>
+                                <div class="vid-icon">
+                                    <a class="vid" href="https://vimeo.com/511999654">
+                                        <div class="vid-butn">
+                                            <span class="icon">
+                                                <i class="fas fa-play"></i>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==================== End block-sec ==================== -->
+
+<!-- ==================== Start call-to-action ==================== -->
+<section id="hire_us" class="call-action section-padding sub-bg bg-img" data-background="{% static 'landing/img/pattern2.png' %}" style="background-image: url(&quot;{% static 'landing/img/pattern2.png' %}&quot;)">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-10">
+                <div class="content sm-mb30">
+                    <h6 class="wow animated words chars splitting" data-splitting="" style="--word-total:2; --char-total:9; visibility: visible;">
+                        <span class="word" data-word="PARLONS" style="--word-index:0;">
+                            <span class="char" data-char="L" style="--char-index:0;">P</span>
+                            <span class="char" data-char="e" style="--char-index:1;">A</span>
+                            <span class="char" data-char="t" style="--char-index:2;">R</span>
+                            <span class="char" data-char="’" style="--char-index:3;">L</span>
+                            <span class="char" data-char="s" style="--char-index:4;">O</span>
+                            <span class="char" data-char="s" style="--char-index:5;">N</span>
+                            <span class="char" data-char="s" style="--char-index:6;">S</span>
+                        </span>
+                    </h6>
+                    <h2 class="wow custom-font animated words chars splitting" data-splitting="" style="--word-total:5; --char-total:21; visibility: visible;">
+                        <span class="word" data-word="DISCUTEZ" style="--word-index:0;">
+                            <span class="char" data-char="d" style="--char-index:0;">d</span>
+                            <span class="char" data-char="i" style="--char-index:1;">i</span>
+                            <span class="char" data-char="s" style="--char-index:2;">s</span>
+                            <span class="char" data-char="c" style="--char-index:3;">c</span>
+                            <span class="char" data-char="u" style="--char-index:4;">u</span>
+                            <span class="char" data-char="t" style="--char-index:5;">t</span>
+                            <span class="char" data-char="e" style="--char-index:6;">e</span>
+                            <span class="char" data-char="z" style="--char-index:7;">z</span>
+                        </span>
+                        <span class="whitespace"></span>
+                        <span class="whitespace"></span>
+                        <span class="whitespace"></span>
+                        <span class="word" data-word="VOTRE" style="--word-index:1;">
+                            <span class="char" data-char="v" style="--char-index:5;">v</span>
+                            <span class="char" data-char="o" style="--char-index:6;">o</span>
+                            <span class="char" data-char="t" style="--char-index:7;">t</span>
+                            <span class="char" data-char="r" style="--char-index:8;">r</span>
+                            <span class="char" data-char="e" style="--char-index:9;">e</span>
+                        </span> 
+                        <span class="whitespace"></span>
+                        <span class="whitespace"></span>
+                        <span class="whitespace"></span>
+                        <b>
+                            <span class="word" data-word="PROCHAIN" style="--word-index:2;">
+                                <span class="char" data-char="p" style="--char-index:10;">p</span>
+                                <span class="char" data-char="r" style="--char-index:11;">r</span>
+                                <span class="char" data-char="o" style="--char-index:12;">o</span>
+                                <span class="char" data-char="c" style="--char-index:13;">c</span>
+                                <span class="char" data-char="h" style="--char-index:14;">h</span>
+                                <span class="char" data-char="a" style="--char-index:15;">a</span>
+                                <span class="char" data-char="i" style="--char-index:16;">i</span>
+                                <span class="char" data-char="n" style="--char-index:17;">n</span>
+                            </span>
+                            <span class="whitespace"></span>
+                            <span class="whitespace"></span>
+                            <span class="whitespace"></span>
+                            <span class="word" data-word="PROJET" style="--word-index:3;">
+                                <span class="char" data-char="p" style="--char-index:13;">p</span>
+                                <span class="char" data-char="r" style="--char-index:14;">r</span>
+                                <span class="char" data-char="o" style="--char-index:15;">o</span>
+                                <span class="char" data-char="j" style="--char-index:16;">j</span>
+                                <span class="char" data-char="e" style="--char-index:17;">e</span>
+                                <span class="char" data-char="t" style="--char-index:18;">t</span>
+                            </span>
+                        </b>
+                        <span class="word" data-word="." style="--word-index:4;">
+                            <span class="char" data-char="." style="--char-index:19;">.</span>
+                        </span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-lg-2 valign">
+                <a href="{% url 'contact' %}" class="btn-curve btn-blc wow fadeInUp" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                    <span style="white-space: nowrap;">Discutons</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ==================== End call-to-action ==================== -->
+
+<!-- ==================== Start services ==================== -->
+<section class="services section-padding pb-70">
+    <div class="container">
+        <div class="sec-head custom-font text-center">
+            <h6 class="wow fadeIn" data-wow-delay=".5s">Nos services</h6>
+            <h3 class="wow words chars splitting animated" data-splitting="">
+                Services
+            </h3>
+            <span class="tbg">Services</span>
+        </div>
+        <div class="row rone">
+            <div class="col-lg-5 wow fadeInUp" data-wow-delay=".4s" style="/* border-radius: 50%; */visibility: visible;animation-delay: 0.4s;animation-name: fadeInUp;">
+                <div class="mas-item">
+                    <span class="icon pe-7s-coffee" style="font-size: 65px;"></span>
+                    <h4>Development</h4>
+                    <p>Transformez votre entreprise grâce à la technologie</p>
+                    <div class="text-right">
+                        <a href="{% url 'services' %}" class="more"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="bg-color"></div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1 wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <div class="mas-item">
+                    <span class="icon pe-7s-magic-wand" style="font-size: 65px;"></span>
+                    <h4>Design&nbsp;Graphique</h4>
+                    <p>améliorez votre expérience utilisateur</p>
+                    <div class="text-right">
+                        <a href="{% url 'services' %}" class="more"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="bg-color"></div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row rtwo">
+            <div class="col-lg-5 wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <div class="mas-item">
+                    <span class="icon pe-7s-cloud" style="font-size: 65px;"></span>
+                    <h4>Cloud&nbsp;&&nbsp;DevOps</h4>
+                    <p>Pérennisez et développez votre infrastructure</p>
+                    <div class="text-right">
+                        <a href="{% url 'services' %}" class="more"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="bg-color"></div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1 wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <div class="mas-item">
+                    <span class="icon pe-7s-headphones" style="font-size: 65px;"></span>
+                    <h4>Support</h4>
+                    <p>Gardez votre logiciel en marche à son meilleur</p>
+                    <div class="text-right">
+                        <a href="{% url 'services' %}" class="more"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="bg-color"></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- ==================== End services ==================== -->
+
+{% endblock pagecontent %}

@@ -9,38 +9,66 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 
-from projects.models import Project
+from projects.models import Project, Category, Service
 
 class IndexView(View):
     def get(self, request) :
-        template = 'landing/index_dark.html'
-        mode_version = request.GET.get('mode', None)
-        if mode_version == "light" :
-            template = 'landing/index_light.html'
-        return render(request, template,  { 'projects' : Project.objects.all() })
-    
+        template = 'landing/index.html'
+        return render(request, template)
+
+class WorksView(View):
+    def get(self, request) :
+        template = 'landing/works.html'
+        return render(request, template,  { 'projects' : Project.objects.all(), 'categories': Category.objects.all() })
+
+class ServicesView(View):
+    def get(self, request) :
+        template = 'landing/services.html'
+        context = {
+            'services': Service.objects.all()
+        }
+        return render(request, template, context)
+
+class DevelopementView(View):
+    def get(self, request) :
+        template = 'landing/services/developement.html'
+        return render(request, template)
+
+class DeisgnView(View):
+    def get(self, request) :
+        template = 'landing/services/design.html'
+        return render(request, template)
+
+class DevopsView(View):
+    def get(self, request) :
+        template = 'landing/services/devops.html'
+        return render(request, template)
+
+class SupportView(View):
+    def get(self, request) :
+        template = 'landing/services/support.html'
+        return render(request, template)
+
+class AboutView(View):
+    def get(self, request) :
+        template = 'landing/about.html'
+        return render(request, template)
+
 class ContactView(View):
     def get(self, request) :
-        template = 'landing/contact_dark.html'
+        template = 'landing/contact.html'
         context = {
             'projects' : Project.objects.all()
         }
         return render(request, template, context)
     def post(self, request):
         name = request.POST.get('name', None)
-        email = request.POST.get('email', None)
         number = request.POST.get('number', None)
         message = request.POST.get('message', None)
-        solution = request.POST.get('solution', None)
-
-        project = get_object_or_404(Project, reference=solution)
 
         html_message = f"""
             <b>Name :</b> {name}
             <b>Phone :</b> {number}
-            <b>Email :</b> {email}
-            <b>Project # :</b> {project.reference}
-            <b>Project Slogan :</b> {project.slogan}
             <b>Message :</b> {message}
         """
 

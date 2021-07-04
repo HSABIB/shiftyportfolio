@@ -1,0 +1,111 @@
+{% load static %}
+<!-- jQuery -->
+<script src="{% static 'landing/js/jquery-3.0.0.min.js' %}"></script>
+<script src="{% static 'landing/js/jquery-migrate-3.0.0.min.js' %}"></script>
+
+<!-- plugins -->
+<script src="{% static 'landing/js/plugins.js' %}"></script>
+
+<!-- custom scripts -->
+<script src="{% static 'landing/js/scripts.js' %}"></script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/9424080.js"></script>
+<!-- End of HubSpot Embed Code -->  
+
+<script>
+const setStyle = () => {
+    $('link').last().attr('href', 
+        localStorage.getItem('mode') === 'light'
+        ? '/static/landing/css/style_light.css'
+        : '/static/landing/css/style_dark.css'
+    )
+    if ( localStorage.getItem('mode') === 'light' ) {
+        $('.navbar').addClass('light')
+    }
+    $('.logo-img').attr('src',
+        localStorage.getItem('mode') === 'light'
+        ? "https://res.cloudinary.com/dchmztvzz/image/upload/v1625014481/developement/logos/New_Project_5_lzrzwt.png"
+        : "https://res.cloudinary.com/dchmztvzz/image/upload/v1624980490/developement/logos/New_Project_6_u70sg5.png"
+    )
+    $('.wheel').css('border', 
+        localStorage.getItem('mode') === 'light' 
+        ? '2px solid #000000'
+        : '2px solid #FFFFFF'
+    )
+    $('.mouse').css('border', 
+        localStorage.getItem('mode') === 'light' 
+        ? '2px solid black'
+        : '2px solid white'
+    )
+    $('.m_scroll_arrows').css('border-right', 
+        localStorage.getItem('mode') === 'light' 
+        ? '2px solid black'
+        : '2px solid white'
+    )
+    $('.m_scroll_arrows').css('border-bottom', 
+        localStorage.getItem('mode') === 'light' 
+        ? '2px solid black'
+        : '2px solid white'
+    )
+}
+
+$(document).ready(function(){
+    setStyle()
+    $('.toggle-mode').html(
+        localStorage.getItem('mode') === "light" 
+        ? '<span class="icon pe-7s-moon cursor-pointer" style="font-size: 16px;"></span>'
+        : '<span class="icon pe-7s-sun cursor-pointer" style="font-size: 16px;"></span>'
+    )
+    $('.toggle-mode').click(function(e){
+        e.preventDefault()
+        localStorage.setItem('mode', localStorage.getItem('mode') === 'light' ? 'dark' : 'light')
+        $('.toggle-mode').html(
+            localStorage.getItem('mode') === "light" 
+            ? '<span class="icon pe-7s-moon cursor-pointer" style="font-size: 16px;"></span>'
+            : '<span class="icon pe-7s-sun cursor-pointer" style="font-size: 16px;"></span>'
+        )
+        setStyle()
+    })
+    $('.select2').select2({width: 'resolve'})
+})
+</script>
+
+{% if request.GET.msg_sent == "true" %}
+<script>
+swal({
+    message : 'Good job!',
+    text : 'Message has been sent succefully !',
+    icon : 'success',
+    buttons: false,
+})
+</script>
+{% endif %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z1X6KSP4T"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7Z1X6KSP4T');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1418320108554219');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1418320108554219&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->

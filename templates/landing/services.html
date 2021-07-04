@@ -1,0 +1,211 @@
+{% extends 'landing/base/index.html' %}
+
+
+{% block extrastyle %}
+<style>
+.span-100001:hover span {
+    color: #23b685!important
+}
+.span-100002:hover span {
+    color: #ff9604!important
+}
+.span-100003:hover span {
+    color: #027ab2!important
+}
+.span-100004:hover span {
+    color: #ff1004!important
+}
+</style>
+{% endblock extrastyle %}
+
+{% block extrascripts %}
+<script>
+$(function () {
+
+    let windowWidth = window.innerWidth
+
+    $(".fadeInUp").hover(function () {
+        $('#'+$(this).data('service')).css('display', '')
+    }, function () {
+        // change to any color that was previously used.
+        $('#'+$(this).data('service')).css('display', 'none')
+    });
+
+    $('.modal-btn').click(function(event) {
+        event.preventDefault()
+
+        let subServiceID = $(this).attr('id')
+        console.log( subServiceID )
+        $('#'+subServiceID+'Modal').modal('show')
+    })
+
+    if ( windowWidth <= 990 ) {
+        $('.remove-on-sm').remove()
+        $('.sm-col').css({ 'margin-top': '0px', 'margin-bottom': '100px' })
+    }
+
+});
+</script>
+{% endblock extrascripts %}
+
+{% block pagecontent %}
+{% load static %}
+<!-- ==================== Start header ==================== -->
+<header class="works-header fixed-slider hfixd valign">
+    <div class="container">
+        <div class="mouse_scroll" style="bottom: 50px">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div>
+                <span class="m_scroll_arrows unu"></span>
+                <span class="m_scroll_arrows doi"></span>
+                <span class="m_scroll_arrows trei"></span>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-md-11 static">
+                <div class="capt mt-50">
+                    <div class="parlx" style="transform: translate3d(0px, 0px, 0px); opacity: 1;">
+                        <h2 class="custom-font">Nous sommes le paquet entier</h2>
+                        <p>besoins logiciels varient considérablement. Nous nous engageons à les satisfaire.</p>
+                    </div>
+                    <div class="bactxt custom-font valign">
+                        <span class="full-width">Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ==================== End header ==================== -->
+
+<div class="main-content">
+    <!-- ==================== Start services ==================== -->
+    {% for service in services %}
+    <section class="clients">
+        {% if forloop.counter == 1 %}
+        <div class="container" style="padding: 100px; margin-top:100px">
+        {% else %}
+        <div class="container" style="padding: 100px;">
+        {% endif %}
+            <div class="row">
+                <div class="col-lg-4 valign">
+                    <div class="sec-head custom-font mb-0">
+                        <!-- <p>{{ service.small_desc }}</p> -->
+                        <h4>{{ service.label|safe }}</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div>
+                        <div class="row bord">
+                            {% for sub_service in service.get_sub_services %}
+                            <div class="col-md-4 col-12 brands">
+                                <div class="item wow fadeIn" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
+                                    <div class="img">
+                                        <img src="{{ sub_service.icon }}" alt="">
+                                        <a href="#0" class="link words chars splitting modal-btn" id="{{ sub_service.reference }}" data-splitting="">
+                                            {{ sub_service.label }}    
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    <!-- ==================== End services ==================== -->
+
+</div>
+{% endblock pagecontent %}
+
+{% block extramodals %}
+
+{% for service in services %}
+{% for sub_service in service.get_sub_services %}
+<!-- Modal -->
+<div class="modal fade" style="z-index: 99999999999999999999999999; "id="{{ sub_service.reference }}Modal" tabindex="-1" role="dialog" aria-labelledby="{{ sub_service.reference }}ModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header" style="background: #ffffff;border-bottom:none;">
+        <button type="button" class="close" style="margin-top: -30px;margin-bottom: -30px;" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true" style="font-size: 20px;color: black;text-shadow: none;">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="valign sm-col" style="margin-top: 100px">
+                    <div class="sec-head custom-font mb-0">
+                        <!-- <p>améliorez votre expérience utilisateur</p> -->
+                        <h4 style="color: #000000">{{ sub_service.label }}</h4>
+                        <p>{{ sub_service.slogan }}</p>
+
+                        {% if service.reference == "100001" %}
+                        <a href="#0" class="btn-curve btn-color span-100001 btn-sm mt-2" style="background: #edfcf7;border-color: #edfcf7;">
+                            <span>Download syllabus</span>
+                        </a>
+                        {% elif service.reference == "100002" %}
+                        <a href="#0" class="btn-curve btn-color span-100002 btn-sm mt-2" style="background: #fff8ee;border-color: #fff8ee;">
+                            <span>Download syllabus</span>
+                        </a>
+                        {% elif service.reference == "100003" %}
+                        <a href="#0" class="btn-curve btn-color span-100003 btn-sm mt-2" style="background: #e7f7ff;border-color: #e7f7ff;">
+                            <span>Download syllabus</span>
+                        </a>
+                        {% elif service.reference == "100004" %}
+                        <a href="#0" class="btn-curve btn-color span-100004 btn-sm mt-2" style="background: #ffeeee;border-color: #ffeeee;">
+                            <span>Download syllabus</span>
+                        </a>
+                        {% endif %}
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 remove-on-sm">
+                {% if service.reference == "100001" %}
+                <img width="1692" height="1978" src="https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Development-2x.png" class="o-lazy-load o-lazy-load--img vc_single_image-img attachment-full o-lazy-load--complete" alt="" sizes="(max-width: 1692px) 100vw, 1692px" srcset="https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Development-2x.png 1692w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Development-2x-257x300.png 257w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Development-2x-881x1030.png 881w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Development-2x-768x898.png 768w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Development-2x-1314x1536.png 1314w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Development-2x-1403x1640.png 1403w">
+                {% elif service.reference == "100002" %}
+                <img width="1692" height="1978" src="https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/05/Group-6.png" class="o-lazy-load o-lazy-load--img vc_single_image-img attachment-full o-lazy-load--complete" alt="" sizes="(max-width: 1692px) 100vw, 1692px" srcset="https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/05/Group-6.png 1692w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/05/Group-6-257x300.png 257w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/05/Group-6-881x1030.png 881w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/05/Group-6-768x898.png 768w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/05/Group-6-1314x1536.png 1314w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/05/Group-6-1403x1640.png 1403w">
+                {% elif service.reference == "100003" %}
+                <img width="1692" height="1978" src="https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Cloud-2x.png" class="o-lazy-load o-lazy-load--img vc_single_image-img attachment-full o-lazy-load--complete" alt="" sizes="(max-width: 1692px) 100vw, 1692px" srcset="https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Cloud-2x.png 1692w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Cloud-2x-257x300.png 257w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Cloud-2x-881x1030.png 881w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Cloud-2x-768x898.png 768w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Cloud-2x-1314x1536.png 1314w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Cloud-2x-1403x1640.png 1403w">
+                {% elif service.reference == "100004" %}
+                <img width="1692" height="1978" src="https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Support-2x.png" class="o-lazy-load o-lazy-load--img vc_single_image-img attachment-full o-lazy-load--complete" alt="" sizes="(max-width: 1692px) 100vw, 1692px" srcset="https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Support-2x.png 1692w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Support-2x-257x300.png 257w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Support-2x-881x1030.png 881w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Support-2x-768x898.png 768w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Support-2x-1314x1536.png 1314w, https://d1zkqmcmykwifr.cloudfront.net/wp-content/uploads/2021/06/Support-2x-1403x1640.png 1403w">
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row sm-row" 
+            {% if service.reference == "100001" %}
+            style="background-color: #edfcf7 !important;padding-top: -100px;margin-top: -170px; margin-bottom: -20px;bottom: 0;"
+            {% elif service.reference == "100002" %}
+            style="background-color: #fff8ee !important;padding-top: -100px;margin-top: -170px; margin-bottom: -20px;bottom: 0;"
+            {% elif service.reference == "100003" %}
+            style="background-color: #e7f7ff !important;padding-top: -100px;margin-top: -170px; margin-bottom: -20px;bottom: 0;"
+            {% elif service.reference == "100004" %}
+            style="background-color: #ffeeee !important;padding-top: -100px;margin-top: -170px; margin-bottom: -20px;bottom: 0;"
+            {% endif %}
+        >
+            <div class="col-md-8">
+                <div class="valign" style="margin-top: 30px;">
+                    <div class="sec-head custom-font mb-0">
+                        <p style="color: #000000;margin-left: 35px;">
+                            {{ sub_service.small_desc }}
+                        </p>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+{% endfor %}
+{% endfor %}
+
+{% endblock extramodals %}

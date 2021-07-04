@@ -1,0 +1,104 @@
+{% extends 'landing/base/index.html' %}
+
+
+{% block extrastyle %}{% endblock extrastyle %}
+
+{% block extrascripts %}{% endblock extrascripts %}
+
+{% block pagecontent %}
+{% load static %}
+<!-- ==================== Start header ==================== -->
+<header class="works-header fixed-slider hfixd valign">
+    <div class="mouse_scroll">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <div>
+            <span class="m_scroll_arrows unu"></span>
+            <span class="m_scroll_arrows doi"></span>
+            <span class="m_scroll_arrows trei"></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-md-11 static">
+                <div class="capt mt-50">
+                    <div class="parlx">
+                        <h2 class="custom-font"><span>Parlons </span>de votre projet.</h2>
+                        <p>N'hésitez pas à nous poser toute question ou faisons nous parler de notre future collaboration.</p>
+                    </div>
+
+                    <div class="bactxt custom-font valign">
+                        <span class="full-width">Contact</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ==================== End header ==================== -->
+
+<!-- ==================== Start main-content ==================== -->
+<div class="main-content">
+    <!-- ==================== Start Contact ==================== -->
+    <section class="contact section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form md-mb50">
+                        <h4 class="extra-title mb-50">Get In Touch.</h4>
+                        <form id="contact-form" method="POST" action="{% url 'contact' %}">
+                            {% csrf_token %}
+                            <div class="messages"></div>
+                            <div class="controls">
+                                <div class="form-group">
+                                    <input id="form_name" type="text" name="name" placeholder="Name*" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <input id="form_phone" type="text" name="number" placeholder="Phone*" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="form_message" name="message" placeholder="Message" rows="4" required="required"></textarea>
+                                </div>
+                                <button type="submit" class="btn-curve btn-color"><span>Send Message</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="cont-info">
+                        <h4 class="extra-title mb-50">Informations de contact.</h4>
+                        <h3 class="custom-font wow" data-splitting>Parlons.</h3>
+                        <div class="item mb-40">
+                            <h5>
+                                <a href="mail:contact@shiftysolutions.com">
+                                    contact@shiftysolutions.com
+                                </a>
+                            </h5>
+                            <h5>
+                                <a href="tel:+212640835584">
+                                    +(212) 640.835.584
+                                </a>
+                            </h5>
+                        </div>
+                        <div class="social mt-50">
+                            <a href="#0" class="icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#0" class="icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.pinterest.fr/hsabib/" class="icon"><i class="fab fa-pinterest"></i></a>
+                            <a href="#0" class="icon"><i class="fab fa-behance"></i></a>
+                        </div>
+
+                        <a href="tel:+212640835584" class="btn-curve btn-color btn-radius mt-4">
+                            <span class="icon pe-7s-call" style="font-size:25px; margin-right:10px"></span>
+                            <span>Obtenez votre consultation gratuite!</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== End Contact ==================== -->
+</div>
+<!-- ==================== End main-content ==================== -->
+{% endblock pagecontent %}
